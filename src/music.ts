@@ -1,16 +1,23 @@
 // Original gentle Web Audio melody. Starts only after Muchchu taps the music button.
-export function createLoveSong() {
-  const AudioContext = window.AudioContext || window.webkitAudioContext;
-  if (!AudioContext) return { stop() {} };
 
-  const ctx = new AudioContext();
+export function createLoveSong() {
+  const AudioContextClass =
+    window.AudioContext ||
+    (window as unknown as { webkitAudioContext: typeof AudioContext })
+      .webkitAudioContext;
+
+  if (!AudioContextClass) {
+    return { stop() {} };
+  }
+
+  const ctx = new AudioContextClass();
   const master = ctx.createGain();
   master.gain.value = 0.055;
   master.connect(ctx.destination);
 
   const notes = [523.25, 659.25, 783.99, 659.25, 587.33, 698.46, 783.99, 698.46];
   let index = 0;
-  let timer;
+  let timer: number | undefined;
 
   const playNote = () => {
     const now = ctx.currentTime;
@@ -35,9 +42,11 @@ export function createLoveSong() {
 
   return {
     stop() {
-      window.clearInterval(timer);
+      if (timer !== undefined) {
+        window.clearInterval(timer);
+      }
       master.gain.setTargetAtTime(0, ctx.currentTime, 0.08);
       window.setTimeout(() => ctx.close(), 250);
-    }
+    },
   };
 }

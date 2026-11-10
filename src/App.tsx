@@ -10,7 +10,6 @@ import {
   Heart,
   Music2,
   VolumeX,
-  MailOpen,
   Sparkles,
   Stars,
   Gift,
