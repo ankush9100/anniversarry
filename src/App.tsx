@@ -182,9 +182,22 @@ const memoryPhotos = [
   "/memories/memory-082.jpg",
   "/memories/memory-083.jpg",
   "/memories/memory-084.jpg",
+  "/memories/memory-085.jpg",
   "/memories/memory-086.jpg",
   "/memories/memory-087.jpg",
-  "/memories/memory-088.jpg"
+  "/memories/memory-088.jpg",
+  "/memories/memory-089.jpg",
+  "/memories/memory-090.jpg",
+  "/memories/memory-091.jpg",
+  "/memories/memory-092.jpg",
+  "/memories/memory-093.jpg",
+  "/memories/memory-094.jpg",
+  "/memories/memory-095.jpg",
+  "/memories/memory-096.jpg",
+  "/memories/memory-097.jpg",
+  "/memories/memory-098.jpg",
+  "/memories/memory-099.jpg",
+  "/memories/memory-100.jpg"
 ];
 
 const questions = [
@@ -672,7 +685,7 @@ export default function App() {
                 <div className="promise-number">
                   {promiseIndex < 0
                     ? "∞"
-                    : `0${promiseIndex + 1}`}
+                    : promiseIndex<9?`0${promiseIndex + 1}`:`${promiseIndex + 1}`}
                 </div>
 
                 <p>
