@@ -896,11 +896,16 @@ export default function App() {
                       {questions[questionIndex]}
                     </h2>
 
+
                     <div
                       className="quiz-actions"
                       style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        gap: "12px",
                         position: "relative",
-                        minHeight: "200px",
                       }}
                     >
                       <button
@@ -913,20 +918,14 @@ export default function App() {
                       <button
                         className="quiz-no"
                         style={{
-                          position: "absolute",
+                          position: "relative",
                           ...(noPosition
                             ? {
                               left: `${noPosition.left}px`,
                               top: `${noPosition.top}px`,
-                              right: "auto",
                               transform: "none",
                             }
-                            : {
-                              right: "6%",
-                              bottom: "8%",
-                              top: "auto",
-                              transform: "none",
-                            }),
+                            : {}),
                         }}
                         onPointerEnter={(event) =>
                           moveNoButton(event, setNoPosition)
@@ -938,6 +937,7 @@ export default function App() {
                         NO 🙈
                       </button>
                     </div>
+
                   </>
                 ) : (
                   <div className="quiz-complete">
@@ -1020,9 +1020,9 @@ export default function App() {
                             transform: "none",
                           }
                           : {
-                            right: "6%",
-                            bottom: "8%",
-                            top: "auto",
+                            // right: "8%",
+                            // bottom: "8%",
+                            top: "30%",
                             transform: "none",
                           }),
                       }}
