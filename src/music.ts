@@ -12,7 +12,7 @@ export function createLoveSong() {
 
   const ctx = new AudioContextClass();
   const master = ctx.createGain();
-  master.gain.value = 0.055;
+  master.gain.value = 0.22;
   master.connect(ctx.destination);
 
   const notes = [523.25, 659.25, 783.99, 659.25, 587.33, 698.46, 783.99, 698.46];

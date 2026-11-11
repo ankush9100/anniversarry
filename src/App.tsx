@@ -39,14 +39,80 @@ const reasons = [
   "Because, Muchchu, you are simply you — and that is my favourite reason.",
 ];
 
+// const promises = [
+//   "I promise to keep choosing you, especially on the ordinary days.",
+//   "I promise to listen, not just hear.",
+//   "I promise to make room for laughter, even when life gets busy.",
+//   "I promise to keep dating you, surprising you and learning you.",
+//   "I promise that distance will never make you feel less loved.",
+//   "I promise to build a life where we both feel safe, seen and celebrated.",
+//   "I promise to never ask you to forget someone who once meant so much to you. I just hope that, with time, I can create a place in your heart that feels just as special, in our own beautiful way.",
+//   "I promise to respect your memories and never ask you to erase a chapter of your life.",
+//   "I promise not to compete with your memories, but to create beautiful new ones with you.",
+//   "I promise to create so many beautiful memories with you that our own little world becomes your favourite place to be.",
+//   "I promise that even if I feel like a temporary person in your life today, I'll keep loving you, understanding you, and making efforts until one day I become someone you can't imagine your life without. ❤️",
+//   "I promise to make our home feel like your home, where you never feel like a stranger, never have to hide your emotions, and always feel loved, understood, and accepted. I know no place can replace your childhood home, but I'll do my best to make this one feel like yours too."
+// ];
+
+
 const promises = [
+  // 1. My commitment to you
   "I promise to keep choosing you, especially on the ordinary days.",
-  "I promise to listen, not just hear.",
+
+  "I promise to love you not just through my words, but through my actions every single day.",
+
+  "I promise to keep dating you, surprising you, and discovering new things about you.",
+
+  // 2. Your emotions are safe with me
+  "I promise to listen, not just hear, and to understand even the words you cannot express.",
+
+  "I promise to never make you feel guilty for your emotions, your silence, or the things you sometimes miss.",
+
+  "I promise to respect your memories and never ask you to erase a chapter of your life.",
+
+  "I promise to never ask you to forget someone who once meant so much to you. I simply hope to create a special place in your heart in our own beautiful way.",
+
+  "I promise not to compete with your memories, but to create beautiful new ones with you.",
+
+  // 3. You will always belong here
+  "I promise to make our home feel like your home, where you never feel like a stranger and always feel loved, understood, and accepted.",
+
+  "I promise to understand whenever you miss your father's home. I know no place can replace the warmth of the home where you grew up, but I'll do my best to make this home feel like yours too.",
+
+  "I promise to stand beside you whenever life feels unfamiliar, so you never have to face those feelings alone.",
+
+  // 4. Let's build a beautiful life together
+  "I promise to build a life where we both feel safe, seen, valued, and celebrated.",
+
   "I promise to make room for laughter, even when life gets busy.",
-  "I promise to keep dating you, surprising you and learning you.",
-  "I promise that distance will never make you feel less loved.",
-  "I promise to build a life where we both feel safe, seen and celebrated.",
+
+  "I promise to celebrate your little victories and stand beside you during your hardest days.",
+
+  "I promise to never let my ego become bigger than my love for you.",
+
+  "I promise to say sorry when I'm wrong and choose understanding over arguments.",
+
+  "I promise that distance, difficult days, or life's unexpected challenges will never make you feel less loved.",
+
+  // 5. My efforts will never stop
+  "I promise to keep learning how to love you in the ways that make you feel most loved.",
+
+  "I promise to never take your presence for granted, no matter how many years we spend together.",
+
+  "I promise to keep creating little moments that remind you how special you are to me.",
+
+  "I promise that even if I feel like a temporary person in your life today, I'll keep loving you, understanding you, and making efforts to build a lasting place in your heart.",
+
+  // 6. Our forever
+  "I promise to grow with you, dream with you, and build our forever together.",
+
+  "I promise to keep falling in love with every version of you, through every phase of life.",
+
+  "I promise that even after a thousand sunsets, I'll still look at you with the same love and excitement.",
+
+  "I promise to keep choosing us, not just today, but every tomorrow that life gives us."
 ];
+
 
 // const memoryPhotos = [
 //   "/memories/IMG-20251215-WA0006.jpg",
@@ -295,7 +361,7 @@ export default function App() {
   const [opened, setOpened] = useState(false);
   const [reasonIndex, setReasonIndex] = useState(-1);
   const [promiseIndex, setPromiseIndex] = useState(-1);
-  const [musicOn, setMusicOn] = useState(false);
+  const [musicOn, setMusicOn] = useState(true);
   const [proposalAccepted, setProposalAccepted] = useState(false);
   const [song, setSong] = useState<LoveSong | null>(null);
 
