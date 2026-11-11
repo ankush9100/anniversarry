@@ -224,43 +224,21 @@ const memoryPhotos = [
   "/memories/memory-070.jpg",
   "/memories/memory-071.jpg",
   "/memories/memory-072.jpg",
+  "/memories/memory-073.jpg",
+  "/memories/memory-074.jpg",
+  "/memories/memory-075.jpg",
+  "/memories/memory-076.jpg",
+  "/memories/memory-077.jpg",
+  "/memories/memory-078.jpg",
   "/memories/memory-079.jpg",
   "/memories/memory-080.jpg",
   "/memories/memory-081.jpg",
   "/memories/memory-082.jpg",
   "/memories/memory-083.jpg",
   "/memories/memory-084.jpg",
-  "/memories/memory-085.jpg",
   "/memories/memory-086.jpg",
   "/memories/memory-087.jpg",
-  "/memories/memory-088.jpg",
-  "/memories/memory-089.jpg",
-  "/memories/memory-090.jpg",
-  "/memories/memory-091.jpg",
-  "/memories/memory-092.jpg",
-  "/memories/memory-093.jpg",
-  "/memories/memory-094.jpg",
-  "/memories/memory-095.jpg",
-  "/memories/memory-096.jpg",
-  "/memories/memory-097.jpg",
-  "/memories/memory-098.jpg",
-  "/memories/memory-099.jpg",
-  "/memories/memory-100.jpg",
-  "/memories/memory-101.jpg",
-  "/memories/memory-102.jpg",
-  "/memories/memory-103.jpg",
-  "/memories/memory-104.jpg",
-  "/memories/memory-105.jpg",
-  "/memories/memory-106.jpg",
-  "/memories/memory-107.jpg",
-  "/memories/memory-108.jpg",
-  "/memories/memory-109.jpg",
-  "/memories/memory-110.jpg",
-  "/memories/memory-111.jpg",
-  "/memories/memory-112.jpg",
-  "/memories/memory-113.jpg",
-  "/memories/memory-114.jpg",
-  "/memories/memory-115.jpg",
+  "/memories/memory-088.jpg"
 ];
 
 const questions = [
@@ -435,7 +413,7 @@ export default function App() {
   //   setPosition({ left, top });
   // };
 
-      const moveNoButton = (
+  const moveNoButton = (
     event: ReactPointerEvent<HTMLButtonElement>,
     setPosition: PositionSetter
   ) => {
@@ -470,11 +448,11 @@ export default function App() {
     }
   };
 
-    return (
+  return (
     <main>
       <Scene3D />
-    <FloatingHearts />
-  
+      <FloatingHearts />
+
 
       <button
         className="music-toggle"
@@ -556,102 +534,102 @@ export default function App() {
           </section>
 
           {step >= 1 && (
-          <section className="section section-reveal" id="story">
-            <div className="section-icon">
-              <Stars />
-            </div>
+            <section className="section section-reveal" id="story">
+              <div className="section-icon">
+                <Stars />
+              </div>
 
-            <p className="eyebrow">CHAPTER ONE</p>
+              <p className="eyebrow">CHAPTER ONE</p>
 
-            <h2>
-              And just like that,
-              <br />
-              <em>we became us.</em>
-            </h2>
+              <h2>
+                And just like that,
+                <br />
+                <em>we became us.</em>
+              </h2>
 
-            <p className="section-copy">
-              A year ago, we began a new adventure.
-              I don't know every chapter waiting for us,
-              but I know who I want beside me for all of them.
-            </p>
-
-            <div className="memory-card">
-              <span className="memory-doodle">♡ ✦ ♡</span>
-
-              <h3>My favourite plot twist?</h3>
-
-              <p>
-                Getting to call my favourite person my wife.
+              <p className="section-copy">
+                A year ago, we began a new adventure.
+                I don't know every chapter waiting for us,
+                but I know who I want beside me for all of them.
               </p>
 
-              <span className="handwritten">
-                Always you, Muchchu.
-              </span>
-            </div>
+              <div className="memory-card">
+                <span className="memory-doodle">♡ ✦ ♡</span>
 
-            <button
-              className="continue-button"
-              onClick={() => unlockAndGo(2, "memories")}
-            >
-              Next: Our little album
-              <ArrowDown size={16} />
-            </button>
-          </section>
+                <h3>My favourite plot twist?</h3>
+
+                <p>
+                  Getting to call my favourite person my wife.
+                </p>
+
+                <span className="handwritten">
+                  Always you, Muchchu.
+                </span>
+              </div>
+
+              <button
+                className="continue-button"
+                onClick={() => unlockAndGo(2, "memories")}
+              >
+                Next: Our little album
+                <ArrowDown size={16} />
+              </button>
+            </section>
           )}
 
           {step >= 2 && (
-          <section className="section memories-section section-reveal" id="memories">
-            <div className="section-icon">
-              <Camera />
-            </div>
+            <section className="section memories-section section-reveal" id="memories">
+              <div className="section-icon">
+                <Camera />
+              </div>
 
-            <p className="eyebrow">OUR LITTLE ALBUM</p>
+              <p className="eyebrow">OUR LITTLE ALBUM</p>
 
-            <h2>
-              Moments that
-              <br />
-              <em>made us, us.</em>
-            </h2>
+              <h2>
+                Moments that
+                <br />
+                <em>made us, us.</em>
+              </h2>
 
-            <p className="section-copy">
-              Every photo is a little piece of our story —
-              the laughs, the quiet days, the adventures,
-              and all the in-between that only we know.
-            </p>
+              <p className="section-copy">
+                Every photo is a little piece of our story —
+                the laughs, the quiet days, the adventures,
+                and all the in-between that only we know.
+              </p>
 
-            <div className="photo-grid">
-              {memoryPhotos.map((src, index) => (
-                <button
-                  key={src}
-                  className="photo-item"
-                  onClick={() => setLightboxIndex(index)}
-                  aria-label={`Open memory ${index + 1}`}
-                >
-                  <img
-                    src={src}
-                    alt={`Memory ${index + 1}`}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <span className="photo-overlay">
-                    <Heart size={20} fill="currentColor" />
-                  </span>
-                </button>
-              ))}
-            </div>
+              <div className="photo-grid">
+                {memoryPhotos.map((src, index) => (
+                  <button
+                    key={src}
+                    className="photo-item"
+                    onClick={() => setLightboxIndex(index)}
+                    aria-label={`Open memory ${index + 1}`}
+                  >
+                    <img
+                      src={src}
+                      alt={`Memory ${index + 1}`}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span className="photo-overlay">
+                      <Heart size={20} fill="currentColor" />
+                    </span>
+                  </button>
+                ))}
+              </div>
 
-            <p className="memories-count">
-              {memoryPhotos.length} little pieces of us 💕
-            </p>
+              <p className="memories-count">
+                {memoryPhotos.length} little pieces of us 💕
+              </p>
 
-            <button
-              className="continue-button"
-              onClick={() => unlockAndGo(3, "reasons")}
-            >
-              Next: Reasons I adore you
-              <ArrowDown size={16} />
-            </button>
-          </section>
+              <button
+                className="continue-button"
+                onClick={() => unlockAndGo(3, "reasons")}
+              >
+                Next: Reasons I adore you
+                <ArrowDown size={16} />
+              </button>
+            </section>
           )}
 
           {lightboxIndex !== null && (
@@ -675,7 +653,7 @@ export default function App() {
                   e.stopPropagation();
                   setLightboxIndex(
                     (lightboxIndex - 1 + memoryPhotos.length) %
-                      memoryPhotos.length
+                    memoryPhotos.length
                   );
                 }}
                 aria-label="Previous photo"
@@ -710,319 +688,319 @@ export default function App() {
           )}
 
           {step >= 3 && (
-          <section className="section tinted section-reveal" id="reasons">
-            <div className="section-icon">
-              <Gift />
-            </div>
-
-            <p className="eyebrow">CHAPTER TWO</p>
-
-            <h2>
-              A few little reasons
-              <br />
-              <em>I adore you.</em>
-            </h2>
-
-            <p className="section-copy">
-              Tap the heart. I have a few things I want you to know
-              (although I could write a thousand).
-            </p>
-
-            <div className="reason-card">
-              <div className="reason-count">
-                {reasonIndex < 0
-                  ? "A LITTLE LOVE NOTE"
-                  : `REASON ${reasonIndex + 1} OF ${reasons.length}`}
+            <section className="section tinted section-reveal" id="reasons">
+              <div className="section-icon">
+                <Gift />
               </div>
 
-              <p className="reason-text">
-                {reasonIndex < 0
-                  ? "Ready, Muchchu? 💗"
-                  : reasons[reasonIndex]}
+              <p className="eyebrow">CHAPTER TWO</p>
+
+              <h2>
+                A few little reasons
+                <br />
+                <em>I adore you.</em>
+              </h2>
+
+              <p className="section-copy">
+                Tap the heart. I have a few things I want you to know
+                (although I could write a thousand).
               </p>
 
-              <button
-                className="round-button"
-                onClick={() =>
-                  setReasonIndex(
-                    (reasonIndex + 1) % reasons.length
-                  )
-                }
-              >
-                <Heart fill="currentColor" />
-                {reasonIndex < 0
-                  ? "Reveal a reason"
-                  : "One more reason"}
-              </button>
-            </div>
+              <div className="reason-card">
+                <div className="reason-count">
+                  {reasonIndex < 0
+                    ? "A LITTLE LOVE NOTE"
+                    : `REASON ${reasonIndex + 1} OF ${reasons.length}`}
+                </div>
 
-            <button
-              className="continue-button"
-              onClick={() => unlockAndGo(4, "promises")}
-            >
-              Next: Little promises
-              <ArrowDown size={16} />
-            </button>
-          </section>
+                <p className="reason-text">
+                  {reasonIndex < 0
+                    ? "Ready, Muchchu? 💗"
+                    : reasons[reasonIndex]}
+                </p>
+
+                <button
+                  className="round-button"
+                  onClick={() =>
+                    setReasonIndex(
+                      (reasonIndex + 1) % reasons.length
+                    )
+                  }
+                >
+                  <Heart fill="currentColor" />
+                  {reasonIndex < 0
+                    ? "Reveal a reason"
+                    : "One more reason"}
+                </button>
+              </div>
+
+              <button
+                className="continue-button"
+                onClick={() => unlockAndGo(4, "promises")}
+              >
+                Next: Little promises
+                <ArrowDown size={16} />
+              </button>
+            </section>
           )}
 
           {step >= 4 && (
-          <section className="section section-reveal" id="promises">
-            <div className="section-icon">
-              <InfinityIcon />
-            </div>
-
-            <p className="eyebrow">CHAPTER THREE</p>
-
-            <h2>
-              Little promises,
-              <br />
-              <em>big forever.</em>
-            </h2>
-
-            <p className="section-copy">
-              Marriage isn't only about the big days.
-              It's about all the little ways we show up for each other.
-            </p>
-
-            <div className="promise-card">
-              <div className="promise-number">
-                {promiseIndex < 0
-                  ? "∞"
-                  : `0${promiseIndex + 1}`}
+            <section className="section section-reveal" id="promises">
+              <div className="section-icon">
+                <InfinityIcon />
               </div>
 
-              <p>
-                {promiseIndex < 0
-                  ? "A promise is waiting for you..."
-                  : promises[promiseIndex]}
+              <p className="eyebrow">CHAPTER THREE</p>
+
+              <h2>
+                Little promises,
+                <br />
+                <em>big forever.</em>
+              </h2>
+
+              <p className="section-copy">
+                Marriage isn't only about the big days.
+                It's about all the little ways we show up for each other.
               </p>
 
-              <button
-                className="text-button"
-                onClick={() =>
-                  setPromiseIndex(
-                    (promiseIndex + 1) % promises.length
-                  )
-                }
-              >
-                Read a promise <span>→</span>
-              </button>
-            </div>
+              <div className="promise-card">
+                <div className="promise-number">
+                  {promiseIndex < 0
+                    ? "∞"
+                    : `0${promiseIndex + 1}`}
+                </div>
 
-            <button
-              className="continue-button"
-              onClick={() => unlockAndGo(5, "love-quiz")}
-            >
-              Next: A little love quiz
-              <ArrowDown size={16} />
-            </button>
-          </section>
+                <p>
+                  {promiseIndex < 0
+                    ? "A promise is waiting for you..."
+                    : promises[promiseIndex]}
+                </p>
+
+                <button
+                  className="text-button"
+                  onClick={() =>
+                    setPromiseIndex(
+                      (promiseIndex + 1) % promises.length
+                    )
+                  }
+                >
+                  Read a promise <span>→</span>
+                </button>
+              </div>
+
+              <button
+                className="continue-button"
+                onClick={() => unlockAndGo(5, "love-quiz")}
+              >
+                Next: A little love quiz
+                <ArrowDown size={16} />
+              </button>
+            </section>
           )}
 
           {step >= 5 && (
-          <section className="quiz-section section-reveal" id="love-quiz">
-            <div className="quiz-card">
-              <span className="quiz-label">
-                A LITTLE LOVE QUIZ 💌
-              </span>
+            <section className="quiz-section section-reveal" id="love-quiz">
+              <div className="quiz-card">
+                <span className="quiz-label">
+                  A LITTLE LOVE QUIZ 💌
+                </span>
 
-              {!quizComplete ? (
-                <>
-                  <div className="quiz-progress">
-                    {questions.map((_, index) => (
-                      <span
-                        key={index}
-                        className={
-                          index <= questionIndex ? "active" : ""
-                        }
-                      />
-                    ))}
-                  </div>
+                {!quizComplete ? (
+                  <>
+                    <div className="quiz-progress">
+                      {questions.map((_, index) => (
+                        <span
+                          key={index}
+                          className={
+                            index <= questionIndex ? "active" : ""
+                          }
+                        />
+                      ))}
+                    </div>
 
-                  <p className="quiz-count">
-                    Question {questionIndex + 1} of{" "}
-                    {questions.length}
-                  </p>
+                    <p className="quiz-count">
+                      Question {questionIndex + 1} of{" "}
+                      {questions.length}
+                    </p>
 
-                  <h2
-                    key={questionIndex}
-                    className="quiz-question"
-                  >
-                    {questions[questionIndex]}
-                  </h2>
-
-                  <div
-                    className="quiz-actions"
-                    style={{
-                      position: "relative",
-                      minHeight: "200px",
-                    }}
-                  >
-                    <button
-                      className="quiz-yes"
-                      onClick={handleYes}
+                    <h2
+                      key={questionIndex}
+                      className="quiz-question"
                     >
-                      YES! 💗
-                    </button>
+                      {questions[questionIndex]}
+                    </h2>
 
-                    <button
-                      className="quiz-no"
+                    <div
+                      className="quiz-actions"
                       style={{
-                        position: "absolute",
-                        ...(noPosition
-                          ? {
+                        position: "relative",
+                        minHeight: "200px",
+                      }}
+                    >
+                      <button
+                        className="quiz-yes"
+                        onClick={handleYes}
+                      >
+                        YES! 💗
+                      </button>
+
+                      <button
+                        className="quiz-no"
+                        style={{
+                          position: "absolute",
+                          ...(noPosition
+                            ? {
                               left: `${noPosition.left}px`,
                               top: `${noPosition.top}px`,
                               right: "auto",
                               transform: "none",
                             }
-                          : {
+                            : {
                               right: "6%",
                               bottom: "8%",
                               top: "auto",
                               transform: "none",
                             }),
+                        }}
+                        onPointerEnter={(event) =>
+                          moveNoButton(event, setNoPosition)
+                        }
+                        onPointerDown={(event) =>
+                          moveNoButton(event, setNoPosition)
+                        }
+                      >
+                        NO 🙈
+                      </button>
+                    </div>
+                  </>
+                ) : (
+                  <div className="quiz-complete">
+                    <div className="quiz-heart">💖</div>
+
+                    <h2>Yayyyy, Muchchu!</h2>
+
+                    <p>
+                      I knew all your answers would be YES.
+                      You are stuck with me forever! 🥰
+                    </p>
+
+                    <button
+                      className="quiz-yes"
+                      onClick={() => unlockAndGo(6, "proposal")}
+                    >
+                      One last surprise ❤️
+                    </button>
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
+          {step >= 6 && (
+            <>
+              <section
+                className="proposal-section section-reveal"
+                id="proposal"
+              >
+                <div className="proposal-stars">
+                  ✦　♡　✧　♡　✦
+                </div>
+
+                <div className="ring">💍</div>
+
+                <p className="eyebrow">
+                  THE MOST IMPORTANT QUESTION
+                </p>
+
+                <h2>
+                  Muchchu,
+                  <br />
+                  <em>will you marry me again?</em>
+                </h2>
+
+                <p className="proposal-copy">
+                  If life gave me a thousand beginnings,
+                  I would find you in every one of them.
+                  I'd choose your hand, your laugh, your heart —
+                  every single time.
+                </p>
+
+                {!proposalAccepted ? (
+                  <div
+                    className="proposal-actions"
+                    style={{
+                      position: "relative",
+                      minHeight: "240px",
+                    }}
+                  >
+                    <button
+                      className="yes-button"
+                      onClick={() => {
+                        setProposalAccepted(true);
+                      }}
+                    >
+                      YES! A MILLION TIMES YES 💗
+                    </button>
+
+                    <button
+                      className="maybe-button"
+                      style={{
+                        position: "absolute",
+                        ...(proposalNoPosition
+                          ? {
+                            left: `${proposalNoPosition.left}px`,
+                            top: `${proposalNoPosition.top}px`,
+                            right: "auto",
+                            transform: "none",
+                          }
+                          : {
+                            right: "6%",
+                            bottom: "8%",
+                            top: "auto",
+                            transform: "none",
+                          }),
                       }}
                       onPointerEnter={(event) =>
-                        moveNoButton(event, setNoPosition)
+                        moveNoButton(event, setProposalNoPosition)
                       }
                       onPointerDown={(event) =>
-                        moveNoButton(event, setNoPosition)
+                        moveNoButton(event, setProposalNoPosition)
                       }
                     >
                       NO 🙈
                     </button>
                   </div>
-                </>
-              ) : (
-                <div className="quiz-complete">
-                  <div className="quiz-heart">💖</div>
+                ) : (
+                  <div className="accepted">
+                    <PartyPopper size={38} />
 
-                  <h2>Yayyyy, Muchchu!</h2>
+                    <h3>SHE SAID YES! AGAIN! 🎉</h3>
 
-                  <p>
-                    I knew all your answers would be YES.
-                    You are stuck with me forever! 🥰
-                  </p>
+                    <p>Best. Decision. Ever.</p>
 
-                  <button
-                    className="quiz-yes"
-                    onClick={() => unlockAndGo(6, "proposal")}
-                  >
-                    One last surprise ❤️
-                  </button>
-                </div>
-              )}
-            </div>
-          </section>
-          )}
+                    <div className="confetti">
+                      ♥ ✦ ♥ ✧ ♥ ✦ ♥
+                    </div>
+                  </div>
+                )}
 
-          {step >= 6 && (
-          <>
-          <section
-            className="proposal-section section-reveal"
-            id="proposal"
-          >
-            <div className="proposal-stars">
-              ✦　♡　✧　♡　✦
-            </div>
+                <p className="forever">
+                  A thousand tomorrows. All with you. ❤️
+                </p>
+              </section>
 
-            <div className="ring">💍</div>
+              <footer>
+                <Heart size={16} fill="currentColor" />
 
-            <p className="eyebrow">
-              THE MOST IMPORTANT QUESTION
-            </p>
+                <p>
+                  Made with all my love, just for you, Muchchu.
+                </p>
 
-            <h2>
-              Muchchu,
-              <br />
-              <em>will you marry me again?</em>
-            </h2>
-
-            <p className="proposal-copy">
-              If life gave me a thousand beginnings,
-              I would find you in every one of them.
-              I'd choose your hand, your laugh, your heart —
-              every single time.
-            </p>
-
-            {!proposalAccepted ? (
-              <div
-                className="proposal-actions"
-                style={{
-                  position: "relative",
-                  minHeight: "240px",
-                }}
-              >
-                <button
-                  className="yes-button"
-                  onClick={() => {
-                    setProposalAccepted(true);
-                  }}
-                >
-                  YES! A MILLION TIMES YES 💗
-                </button>
-
-                <button
-                  className="maybe-button"
-                  style={{
-                    position: "absolute",
-                    ...(proposalNoPosition
-                      ? {
-                          left: `${proposalNoPosition.left}px`,
-                          top: `${proposalNoPosition.top}px`,
-                          right: "auto",
-                          transform: "none",
-                        }
-                      : {
-                          right: "6%",
-                          bottom: "8%",
-                          top: "auto",
-                          transform: "none",
-                        }),
-                  }}
-                  onPointerEnter={(event) =>
-                    moveNoButton(event, setProposalNoPosition)
-                  }
-                  onPointerDown={(event) =>
-                    moveNoButton(event, setProposalNoPosition)
-                  }
-                >
-                  NO 🙈
-                </button>
-              </div>
-            ) : (
-              <div className="accepted">
-                <PartyPopper size={38} />
-
-                <h3>SHE SAID YES! AGAIN! 🎉</h3>
-
-                <p>Best. Decision. Ever.</p>
-
-                <div className="confetti">
-                  ♥ ✦ ♥ ✧ ♥ ✦ ♥
-                </div>
-              </div>
-            )}
-
-            <p className="forever">
-              A thousand tomorrows. All with you. ❤️
-            </p>
-          </section>
-
-          <footer>
-            <Heart size={16} fill="currentColor" />
-
-            <p>
-              Made with all my love, just for you, Muchchu.
-            </p>
-
-            <span>
-              Happy first anniversary · 12.11.2026
-            </span>
-          </footer>
-          </>
+                <span>
+                  Happy first anniversary · 12.11.2026
+                </span>
+              </footer>
+            </>
           )}
         </>
       )}
